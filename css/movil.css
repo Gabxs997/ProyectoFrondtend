@@ -1,0 +1,145 @@
+/* Para ocultar header1 en dispositivos móviles */
+@media screen and (max-width: 430px) {
+    .header1 {
+        display: none;
+    }
+
+    .header2 {
+        position: relative;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #000;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        padding: 20px;
+        z-index: 10;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu li a {
+        color: #333;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu li a:hover {
+        color: #f49c42;
+    }
+
+    .quote-btn {
+        display: none;
+        margin: 20px auto;
+    }
+
+    .search-and-button i{
+      position: relative;
+      bottom: 10px;
+    }
+
+
+/* Para la sección de slider y texto */
+
+.slider-frame {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+}
+
+.rslides {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.rslides li {
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+}
+
+.rslides img {
+    width: 100%;
+    height: auto;
+}
+
+.main-text {
+    padding: 5px;
+    text-align: center;
+}
+
+.main-text h1 {
+    font-size: 12px;  /* Ajustar tamaño de la fuente */
+    margin-bottom: 5px;
+}
+
+.main-text p{
+    font-size: 12px ;
+}
+
+.main-text .wow {
+    font-size: 10px;  /* Ajustar tamaño de la fuente */
+}
+
+.main-text .main-btn {
+    font-size: 12px;
+    padding: 8px 10px;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+   margin: 10px;
+}
+
+.main-text .main-btn i {
+    margin-left: 5px;
+}
+
+/* Ajuste para el texto principal */
+.main-text p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el botón de contacto */
+.main-text .main-btn:hover {
+    background-color: rgb(1, 1, 48);
+  }
+}
+
+/* Estilos para la versión de escritorio */
+@media screen and (min-width: 769px) {
+    .hamburger-menu {
+        display: none; 
+    }
+}

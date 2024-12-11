@@ -1,0 +1,116 @@
+.team{
+    text-align: center;
+    font-weight: 500;
+    }
+    
+    .team h1{
+        color: rgb(1, 1, 48);
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    
+    .team h2{
+        font-size: 16px;
+        color: grey;
+        font-weight: 200;
+        margin-bottom: 10px;
+    }
+
+    .acordeon {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        border: 2px solid rgb(1, 1, 48);
+        border-radius: 8px;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+    }
+    
+    .acordeon_titulo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(1, 1, 48);
+        color: white;
+        padding: 15px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .acordeon_titulo:hover {
+        background-color: orange;
+    }
+    
+    .acordeon_titulo h3 {
+        font-size: 1.2em;
+        margin: 0;
+    }
+    
+    .acordeon_titulo h1 {
+        font-size: 16px;
+        font-weight: 300;
+        color: orange;
+        margin: 0;
+    }
+    
+    .acordeon_titulo i {
+        color: white;
+        font-size: 1.5em;
+        transition: transform 0.3s ease;
+    }
+    
+    .acordeon_titulo.active i {
+        transform: rotate(45deg); /* Rotar el ícono al abrir */
+    }
+    
+    .acordeon_contenido {
+        display: none;
+        padding: 20px;
+        background-color: white;
+        border-top: 1px solid rgba(1, 1, 48, 0.2);
+    }
+    
+    .acordeon_contenido img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        margin: 15px auto; /* Centra la imagen */
+        display: block; /* Asegura que actúe como bloque */
+        text-align: center;
+    }
+    
+    .acordeon_contenido .redes {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        gap: 15px; /* Espacio entre los íconos */
+        margin-top: 15px;
+    }
+    
+    .acordeon_contenido .redes a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; /* Hace el fondo circular */
+        background-color: rgba(1, 1, 48, 0.1); /* Fondo suave */
+        color: rgb(1, 1, 48);
+        font-size: 1.5em;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        text-decoration: none; /* Elimina subrayado */
+    }
+    
+    .acordeon_contenido .redes a:hover {
+        background-color: orange; /* Color de fondo al pasar el cursor */
+        color: white; /* Cambia el color del ícono al pasar el cursor */
+    }
+    
+    /* Mostrar contenido abierto */
+    .acordeon_titulo.active + .acordeon_contenido {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    

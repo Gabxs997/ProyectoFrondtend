@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proyectoFrontend</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/slidefotos.css">
+    <link rel="stylesheet" href="css/acordeon.css">
+    <link rel="stylesheet" href="css/carrousel.css">
+    <link rel="stylesheet" href="css/movil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="responsiveslides/responsiveslides.min.js"></script>
+    <link rel="stylesheet" href="animations/animate.css">
+    <link rel="stylesheet" href="JavaScript/fixedscroll.js">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="JavaScript/modal.js">
+    <link rel="stylesheet" href="JavaScript/acordeon.js">
+    <link rel="stylesheet" href="JavaScript/carrousel.js">
+    
+</head>
+
+<body>
+    <header id="header">
+        <section class="header1 centrar">
+            <div class="contact">
+                <a href=""><i class="fas fa-map-marker-alt"></i> <span class="text">25/B Milford Road, New York</span></a>
+                <a href=""><i class="fa-solid fa-phone"></i><span class="text">+2 123 654 7898</span></a>
+                <a href=""><i class="fas fa-envelope icon-border"></i> <span class="text">info@example.com</span></a>
+            </div>
+            <div class="redes">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </section>
+        <section class="header2 centrar">
+            <img src="img/pestox.png" alt="Logo">
+            <nav>
+                <div class="menu-container">
+                    <div class="hamburger-menu" id="hamburger-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <ul class="menu" id="menu">
+                        <li><a href="#">Home <i class="fas fa-chevron-down"></i></a></li>
+                        <li><a href="#">About <i class="fas fa-chevron-down"></i></a></li>
+                        <li><a href="#">Pages <i class="fas fa-chevron-down"></i></a></li>
+                        <li><a href="#">Services <i class="fas fa-chevron-down"></i></a></li>
+                        <li><a href="#">Project <i class="fas fa-chevron-down"></i></a></li>
+                        <li><a href="#">Blog <i class="fas fa-chevron-down"></i></a></li>
+                        <li><a href="#contactanos">Contact <i class="fas fa-chevron-down"></i></a></li>
+                    </ul>
+                    <div class="search-and-button">
+                        <a href=""><i class="fas fa-search"></i></a>
+                        <button class="quote-btn">Get Quote</button>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+    
+    <section>
+        <div class="slider-frame">
+            <ul class="rslides" id="slider">
+                <li><img src="img/img1.jpg" alt="Imagen 1"></li>
+                <li><img src="img/img2.jpg" alt="Imagen 2"></li>
+                <li><img src="img/img3.jpg" alt="Imagen 3"></li>
+            </ul>
+
+            <article class="main-text">
+                <h1 class="wow animate__animated animate__fadeInUp">PROTECT YOUR HOME TODAY</h1><br>
+                <div class="wow animate__animated animate__fadeInUp"><span
+                        style="font-size: 20px;font-family: 'Times New Roman';">WE CARE ABOUT <span
+                            style="color: orange;">YOUR PEST INFESTATION</span></span></div>
+                <br>
+                <p class="wow animate__animated animate__fadeInUp">There are many variations of passages avaible but the
+                    majoruty have suffered alteration in some form
+                    by injected humour or randomised words.</p><br><br>
+                <div class="wow animate__animated animate__fadeInUp"> <a href="#contactanos"
+                        class="main-btn wow animate__animated animate__fadeInUp">Contact Us &nbsp;&nbsp;<i
+                            class="fa-solid fa-arrow-right"></i></a> &nbsp;&nbsp;
+                    <a href="#" class="main-btn wow animate__animated animate__fadeInUp">About Us &nbsp;&nbsp;<i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </article>
+        </div>
+    </section>
+
+    <section class="getyourservice">
+        <h1 class="wow animate__animated animate__fadeInUp">Get Your Service</h1>
+        <a href="#" class="btn_modal wow animate__animated animate__fadeInUp" id="boton_modal">Get Started&nbsp;&nbsp;<i
+                class="fa-solid fa-arrow-right"></i></a>
+    </section>
+
+    <!-- Modal -->
+    <section id="modal" class="fondomodal">
+        <div class="contenidomodal wow animate__animated animate__fadeInUp">
+            <div class="alineacion_cerrar">
+                <i id="cerrar_modal" class="cerrarmodal fas fa-times-circle"></i>
+            </div>
+
+            <h2>Capture Your Data</h2>
+            <form id="form_modal">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name" />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number" />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email" />
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Type</label>
+                    <select id="service" name="service" required>
+                        <option value="Residental pest control">Residental pest control</option>
+                        <option value="Commercil pest control">Commercil pest control</option>
+                        <option value="Industrial pest control">Industrial pest control</option>
+                    </select>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </section><br><br>
+
+    <section class="info">
+        <div class="infocontainer wow animate__animated animate__fadeInUp">
+            <i class="fa-solid fa-users"></i>
+            <h1>Experts Staff</h1>
+            <p>There are many variations of passages available but the majority have suffered in some form by injected
+                humour.</p>
+        </div>
+
+        <div class="infocontainer wow animate__animated animate__fadeInUp">
+            <i class="fa-solid fa-cogs"></i>
+            <h1>Quality Work</h1>
+            <p>There are many variations of passages available but the majority have suffered in some form by injected
+                humour.</p>
+        </div>
+
+        <div class="infocontainer wow animate__animated animate__fadeInUp">
+            <i class="fa-solid fa-wallet"></i>
+            <h1>Affordable Price</h1>
+            <p>There are many variations of passages available but the majority have suffered in some form by injected
+                humour.</p>
+        </div>
+
+    </section>
+
+    <section class="fondoclippath">
+        <div class="clippath wow animate__animated animate__fadeInUp">
+            <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/eb1UV9vzNSM?controls=0&modestbranding=1&showinfo=0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+    </section>
+
+    <section id="contactanos" class="contactanos">
+        <div class="contactanos-container wow animate__animated animate__fadeInUp">
+            <h2 class="wow animate__animated animate__fadeInUp">Contact Us!</h2>
+            <p>We are here to help. If you have any questions or concerns, feel free to get in touch with us.</p>
+            <form action="#">
+                <input type="text" placeholder="Your name" required>
+                <input type="email" placeholder="Your email" required>
+                <textarea placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="contactanosimg wow animate__animated animate__fadeInUp"> <img src="img/contactanos.jpg" alt=""></div>
+    </section>
+    <br><br>
+    <section>
+        <div class="whatweofer">
+            <span style="color: orange; font-size:20px;" class="wow animate__animated animate__fadeInUp">SERVICES</span>
+            <h1 class="wow animate__animated animate__fadeInUp">What We Offer</h1>
+            <h2 class="wow animate__animated animate__fadeInUp">It is a long established fact that a reader will be distracted</h2><br>
+        </div>
+         <div class="whatweoffercontainer wow animate__animated animate__fadeInUp">
+              <div class="card">
+                  <img src="img/01.jpg" alt="">
+                  <h1>Residencial Pest Control</h1>
+                  <p>There are many variations of passages available but the majority have suffered in some form by injected humour.</p>
+                  <h2>Learn more &nbsp;&nbsp; <i class="fa-solid fa-arrow-right"></i></h2>
+              </div>
+              <div class="card">
+                <img src="img/02.jpg" alt="">
+                <h1>Commercial Pest Control</h1>
+                <p>There are many variations of passages available but the majority have suffered in some form by injected humour.</p>
+                <h2>Learn more &nbsp;&nbsp; <i class="fa-solid fa-arrow-right"></i></h2>
+            </div>
+            <div class="card">
+                <img src="img/03.jpg" alt="">
+                <h1>Industrial Pest Control</h1>
+                <p>There are many variations of passages available but the majority have suffered in some form by injected humour.</p>
+                <h2>Learn more &nbsp;&nbsp; <i class="fa-solid fa-arrow-right"></i></h2>
+            </div>
+            <div class="card">
+                <img src="img/04.jpg" alt="">
+                <h1>Exclusive Pest Control</h1>
+                <p>There are many variations of passages available but the majority have suffered in some form by injected humour.</p>
+                <h2>Learn more &nbsp;&nbsp; <i class="fa-solid fa-arrow-right"></i></h2>
+            </div>
+            <div class="card">
+                <img src="img/05.jpg" alt="">
+                <h1>Pest Prevention</h1>
+                <p>There are many variations of passages available but the majority have suffered in some form by injected humour.</p>
+                <h2>Learn more &nbsp;&nbsp; <i class="fa-solid fa-arrow-right"></i></h2>
+            </div>
+            <div class="card">
+                <img src="img/06.jpg" alt="">
+                <h1>Regular Pest Control</h1>
+                <p>There are many variations of passages available but the majority have suffered in some form by injected humour.</p>
+                <h2>Learn more &nbsp;&nbsp; <i class="fa-solid fa-arrow-right"></i></h2>
+            </div>
+         </div>
+    </section>
+     
+    <section>
+        <div class="team">
+            <span style="color: orange; font-size:20px;" class="wow animate__animated animate__fadeInUp">   TEAM</span>
+            <h1 class="wow animate__animated animate__fadeInUp">Meet Experts</h1>
+            <h2 class="wow animate__animated animate__fadeInUp">It is a long established fact that a reader will be distracted</h2><br>
+        </div>
+         <div class="acordeon">
+            <div class="acordeon_titulo">
+                <i class="fa-solid fa-plus"></i>
+                <h3>Arron Rodri</h3>
+                <h1>Senior staff</h1>
+              </div>
+              <article class="acordeon_contenido">
+                <img src="img/expert1.jpg" alt="">
+                <div class="redes">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </article>
+              <div class="acordeon_titulo">
+                <i class="fa-solid fa-plus"></i>
+                <h3>Melissa Ferrero</h3>
+                <h1>Senior staff</h1>
+              </div>
+              <article class="acordeon_contenido">
+                <img src="img/expert2.jpg" alt="">
+                <div class="redes">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </article>
+              <div class="acordeon_titulo">
+                <i class="fa-solid fa-plus"></i>
+                <h3>Chad smith</h3>
+                <h1>Senior staff</h1>
+              </div>
+              <article class="acordeon_contenido">
+                <img src="img/expert3.jpg" alt="">
+                <div class="redes">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+              </article>
+              <div class="acordeon_titulo">
+                <i class="fa-solid fa-plus"></i>
+                <h3>Toni Pinto</h3>
+                <h1>Senior staff</h1>
+              </div>
+              <article class="acordeon_contenido">
+                <img src="img/expert4.jpg" alt="">
+                <div class="redes">
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </article>
+         </div>
+
+    </section><br><br>
+
+    <section>
+        <div class="carrouseltext">
+            <span style="color: orange; font-size:20px;" class="wow animate__animated animate__fadeInUp">CASES</span>
+            <h1 class="wow animate__animated animate__fadeInUp">Recent Projects</h1>
+            <h2 class="wow animate__animated animate__fadeInUp">It is a long established fact that a reader will be distracted</h2><br>
+        </div>
+
+        <section id="carrousel" class=" centrar ancho carousel">
+            <div id="slide-container" class="contenedor">
+    
+                <article class="slide" data-slideIndex="0">
+                    <img src="img/carrousel1.jpg" alt="">
+                </article>
+    
+                <article class="slide" data-slideIndex="0">
+                    <img src="img/carrousel2.jpg" alt="">
+                </article>
+    
+                <article class="slide" data-slideIndex="0">
+                    <img src="img/carrousel3.jpg" alt="">
+                </article>
+    
+                <article class="slide" data-slideIndex="0">
+                    <img src="img/carrousel4.jpg" alt="">
+                </article>
+    
+            </div>
+    
+            <div class="slide-buttons contenedor">
+                <a href="#" id="back-button" class="arrow back">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+                <a href="#" id="forward-button" class="arrow forward">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+    
+            <div class=" slide-indicators contenedor">
+                 <a href="#" class="slide-indicator active"></a>
+                 <a href="#" class="slide-indicator "></a>
+                 <a href="#" class="slide-indicator "></a>
+                 <a href="#" class="slide-indicator "></a>
+                 <a href="#" class="slide-indicator "></a>
+            </div>
+        </section>
+
+
+    <footer>
+        <section class="footer centrar">
+            <br><br>
+            <div class="contenedortexto">
+                <p>We are many variations of passages available but the majority have suffered alteration in some form
+                    by injected humour.</p><br>
+                <div class="contactfooter">
+                    <a href=""><i class="fas fa-map-marker-alt"></i> <span class="text">25/B Milford Road, New
+                            York</span></a>
+                    <a href=""><i class="fa-solid fa-phone"></i><span class="text">+2 123 654 7898</span></a>
+                    <a href=""><i class="fas fa-envelope icon-border"></i> <span
+                            class="text">info@example.com</span></a>
+                </div>
+                <div class="social-footer">
+                    <a href="#" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contenedorQuicklinks">
+                <h1>Quick links</h1>
+                <hr class="linea"><br>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>About us</h2>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>FAQ's</h2>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>Terms of services</h2>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>Privacy Policy</h2>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>Our services</h2>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>Latest Blog</h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contenedorOurservices">
+                <h1>Our services</h1>
+                <hr class="linea"><br>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>Residential Pest Control</h2>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>Commercial Pest Control</h2>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>Industrial Pest Control</h2>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>Exclusive Pest Control</h2>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>Pest Prevention</h2>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <a href="">
+                        <h2>Regular Pest Control</h2>
+                    </a>
+                </div>
+            </div>
+
+            <div class="newsletter">
+                <h1>Newsletter</h1>
+                <hr class="linea"><br>
+                <p>Subscribe Our Newsletter to get latest update and news.</p>
+                <div class="email-form">
+                    <input type="email" id="email" name="email" placeholder="Your email" required><br><br>
+                    <button type="submit" class="send-button">Suscribe now &nbsp<i
+                            class="fa-solid fa-paper-plane"></i></i></button>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script src="JavaScript/slidefotos.js"></script>
+    <script src="responsiveslides/responsiveslides.min.js"></script>
+    <script src="JavaScript/fixedscroll.js"></script>
+    <script src="animations/wow.min.js"></script>
+    <script src="JavaScript/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <script src="JavaScript/acordeon.js"></script>
+    <script src="JavaScript/carrousel.js"></script>
+    <script>document.getElementById('hamburger-menu').addEventListener('click', function() {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('show');
+    });</script>
+    
+
+    <a href="#header" class="scroll-to">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+</body>
+
+</html>

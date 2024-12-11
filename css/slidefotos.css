@@ -1,0 +1,123 @@
+.rslides {
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: none;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+  
+  .rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
+  }
+  
+  .rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
+    filter: brightness(40%);
+  }
+
+  .slider-frame{
+    margin-bottom: 50px;
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  
+  .rslides_nav {
+    text-indent: -9999px; /* Esconde cualquier texto (como respaldo) */
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+    cursor: pointer;
+    background: transparent url("responsiveslides/themes/themes.png") no-repeat left top;
+}
+  
+  .rslides_nav.next {
+    left: auto;
+    background-position: right top;
+    right: 0;
+  }
+
+  .main-text {
+    position: absolute;
+    top: 50%; /* Centrado vertical */
+    left: 50%; /* Centrado horizontal */
+    transform: translate(-50%, -50%); /* Para que quede perfectamente centrado */
+    color: white; /* Color de texto blanco, pero puedes cambiarlo */
+    text-align: center;
+    z-index: 10; /* Asegura que esté por encima de las imágenes */
+  }
+
+  
+  .main-text h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: orange;
+    font-family: 'Times New Roman';
+    animation-name: animacioncolor;
+    animation-duration: 8s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes animacioncolor{
+
+    0%{
+        color: orange;
+        transform: scale(1.1);
+    }
+    50%{
+        color: rgb(1, 1, 48);
+        transform: scale(1.1);
+    }
+    100%{
+        color: white;
+        transform: scale(1.1);
+    }
+   
+}
+  
+  .main-text p {
+    font-size: 19px;
+    margin-bottom: 30px;
+    text-align: left;
+    text-justify: auto;
+    line-height: 1.5;
+    font-family: 'Times New Roman';
+  }
+  
+  .main-btn {
+    padding: 10px 15px;
+    background-color: orange; /* El color que quieras para el botón */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+  }
+  
+  .main-btn:hover {
+    background-color: rgb(1, 1, 48); /* Color del botón cuando se pasa el ratón */
+  }
+
+
+
